@@ -11,6 +11,6 @@ def solution(p: float, x: np.array) -> tuple:
     t = 38
     alpha = 1 - p
     min = (-x).min()
-    z = -np.log(1-p)/x.size
+    z = -np.log(1-p)/len(x)
     
-    return 2*(-min-1/2)/(t*t), 2*(z-min-1/2)/(t*t)        
+    return 2*(z-min-1/2)/(t**2), 2*(-min-1/2)/(t**2)        
