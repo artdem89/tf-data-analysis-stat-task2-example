@@ -10,7 +10,7 @@ def solution(p: float, x: np.array) -> tuple:
     # Не меняйте название функции и её аргументы
     t = 38
     alpha = 1 - p
-    min = (-x).min()
-    z = -np.log(1-p)/len(x)
+    z = -np.log(alpha)/len(x)
     
-    return 2*(-min-1/2)/(t**2), 2*(z-min-1/2)/(t**2)        
+    return (-min(-x) - 1/2) / (t**2 / 2), (z - min(-x) - 1/2) / (t**2 / 2)        
+
